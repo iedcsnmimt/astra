@@ -1,0 +1,507 @@
+// Theme Variables
+footer {
+    --text-FooterColor: rgb(51, 49, 49);
+    background-color: #CBCACA;
+    color: var(--text-FooterColor);
+    padding: 3rem 0 1rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.15ch;
+    position: relative;
+
+    .link {
+        color: white;
+        &::after {
+            background: white;
+        }
+    }
+}
+
+// Footer Layout
+.footer-5-column {
+    padding-top: 3rem;
+    margin-top: 2rem;
+
+    p {
+        color: #777777;
+    }
+
+    .footer-container {
+        max-width: 1320px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 12px;
+        box-sizing: border-box;
+
+        .footer-navbar-container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+
+            .footer-company-details {
+                width: 35%;
+                flex: 0 0 auto;
+                padding-right: 2rem;
+                line-height: 1.428;
+
+                .footer-logo {
+                    width: 60px;
+
+                    img, svg {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .footer-content {
+                    margin-top: 1rem;
+                    font-size: 16px;
+                    line-height: 1.8;
+                    padding-right: 1rem;
+                }
+
+                .footer-icons {
+                    margin-top: 1.5rem;
+
+                    ul {
+                        display: flex;
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+
+                        li {
+                            display: flex;
+                            margin-right: 14px;
+
+                            a {
+                                width: 30px;
+                                padding: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-navbar {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        line-height: 1.428;
+
+        .footer-navbar-col {
+            width: 25%;
+            flex: 0 0 auto;
+
+            h5 {
+                margin-bottom: 1.5rem;
+                color: #000;
+                padding-right: 0.5rem;
+            }
+
+            ul {
+                padding-right: 0.5rem;
+                margin: 0;
+
+                li {
+                    list-style: none;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+
+                    a {
+                        font-size: 16px;
+                        text-decoration: none;
+                        color: #777777;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-copyright {
+        padding: 2rem 0;
+        border-top: 1px solid rgb(219, 215, 215);
+        text-align: center;
+
+        p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Responsive Styling
+@media all and (max-width: 1140px) {
+    .footer-5-column {
+        .footer-container {
+            .footer-navbar-container {
+                row-gap: 3rem;
+
+                .footer-company-details,
+                .footer-navbar {
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .footer-5-column {
+        .footer-navbar {
+            .footer-navbar-col {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// Footer Items Section
+.footerItems {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+
+    > * {
+        flex: 1;
+    }
+
+    > :last-child > img {
+        display: block;
+        margin-left: auto;
+    }
+
+    .thanks {
+        font-family: "Antonio", sans-serif;
+        font-size: 45px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    p {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+}
+
+// Logo Section
+.LogoContainer {
+    margin: 0.625rem 1rem 1rem;
+    position: relative;
+
+    > img {
+        width: 250px;
+        filter: invert(100%);
+        display: block;
+        margin: auto;
+    }
+
+    .title {
+        position: absolute;
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 0.22ch;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        left: 50%;
+        bottom: 4.8rem;
+        transform: translate(-50%, 0);
+    }
+}
+
+// Register Button
+.Registerbtn {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: rgb(190, 3, 3);
+    color: white;
+    font-size: large;
+    margin-top: 10px;
+    border: none;
+}
+
+// Main Footer Content
+.MainFooterContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: space-around;
+
+    .footerContent {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .QuotesContainer {
+        font-family: 'Staatliches', cursive;
+        width: 300px;
+
+        .quotes {
+            font-size: 1.8rem;
+        }
+    }
+
+    .sponsor-wrapper {
+        .sponsor {
+            width: fit-content;
+            margin-left: auto;
+        }
+
+        .sponsors {
+            height: 2rem;
+            margin: 0.4rem;
+        }
+
+        .sponsorImgs {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// Social Media Handles
+.SocialHandles {
+    display: flex;
+    list-style-type: none;
+
+    .handle-wrapper {
+        margin-right: 1rem;
+
+        .handle {
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 3.2rem;
+            height: 3.2rem;
+            position: relative;
+
+            a {
+                border-radius: 50%;
+                border: 1px solid var(--text-FooterColor);
+            }
+
+            > svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40%;
+                height: 40%;
+                fill: var(--text-FooterColor);
+                transition: 0.2s ease;
+            }
+        }
+
+        .handle:hover > svg {
+            width: 50%;
+            height: 50%;
+        }
+    }
+}
+
+// Copyright Section
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(51, 49, 49);
+    font-size: 0.95rem;
+    padding: 0.8rem 0;
+    text-align: center;
+
+    p {
+        margin-bottom: 0.8rem;
+    }
+
+    .team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .devteamBtn {
+            background-color: transparent;
+            border: none;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Open Sans';
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: var(--primary);
+                transition: .4s;
+                transform: scaleX(0);
+            }
+
+            &:hover::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .footer-5-column {
+        .footer-navbar {
+            .footer-navbar-col {
+                width: 50%; // Two columns layout on tablets
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .footer-5-column {
+        padding-top: 2rem;
+
+        .footer-container {
+            padding: 0 16px;
+            
+            .footer-navbar-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-company-details {
+                width: 100%;
+                padding: 0;
+                
+                .footer-logo {
+                    width: 80px;
+                    margin: 0 auto;
+                }
+
+                .footer-content {
+                    font-size: 14px;
+                    line-height: 1.6;
+                }
+                
+                .footer-icons {
+                    margin-top: 1rem;
+
+                    ul {
+                        justify-content: center;
+
+                        li {
+                            margin: 0 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-navbar {
+            flex-direction: column;
+            align-items: center;
+
+            .footer-navbar-col {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .footerItems {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .LogoContainer {
+        > img {
+            width: 180px; // Adjust logo size for small screens
+        }
+    }
+
+    .Registerbtn {
+        width: 80%;
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-5-column {
+        .footer-navbar {
+            .footer-navbar-col {
+                width: 100%;
+            }
+        }
+    }
+
+    .footerItems {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .thanks {
+        font-size: 36px;
+    }
+
+    .LogoContainer {
+        > img {
+            width: 150px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+        }
+    }
+
+    .SocialHandles {
+        flex-direction: column;
+        align-items: center;
+
+        .handle-wrapper {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-5-column {
+        position: relative;
+        padding-bottom: 4rem; // Space for title at bottom
+    }
+
+    .LogoContainer {
+        position: absolute;
+        bottom: 6.6rem; // Stick to bottom
+        left: 45%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        
+        .title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 0.1ch;
+        }
+    }
+}
+
+
