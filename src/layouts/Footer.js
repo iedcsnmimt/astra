@@ -1,5 +1,5 @@
 import styles from '../styles/Footer.module.scss';
-
+import cx from 'classnames';
 import { useState } from 'react';
 
 const Footer = () => {
