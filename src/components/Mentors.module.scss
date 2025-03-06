@@ -5,26 +5,41 @@ $background: #f4f4f4;
 $card-bg: rgba(255, 255, 255, 0.1);
 $text-dark: #222;
 $shadow: rgba(0, 0, 0, 0.2);
+$blur-background: rgba(255, 255, 255, 0.2);
+$overlay-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: $background;
+  color: $text-dark;
+}
 
 .mentorsPage {
-  font-family: "Poppins", sans-serif;
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border-radius: 20px;
+  background: linear-gradient(to right, #1e3c72 0%, #2a5298 100%);
   color: white;
 
   .header {
     margin-bottom: 3rem;
 
     h1 {
-      font-size: clamp(2rem, 5vw, 3rem); // Responsive font size
+      font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
 
     p {
-      font-size: clamp(1rem, 3vw, 1.4rem); // Responsive paragraph size
+      font-size: clamp(1rem, 3vw, 1.4rem);
       opacity: 0.9;
     }
   }
@@ -53,7 +68,7 @@ $shadow: rgba(0, 0, 0, 0.2);
 
     .imageWrapper {
       width: 100%;
-      height: 300px; // Adjusted height for mobile
+      height: 300px;
       position: relative;
       overflow: hidden;
 
@@ -68,7 +83,7 @@ $shadow: rgba(0, 0, 0, 0.2);
         position: absolute;
         bottom: 0;
         width: 100%;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        background: $overlay-gradient;
         padding: 1rem;
         color: white;
         text-align: center;
@@ -80,7 +95,7 @@ $shadow: rgba(0, 0, 0, 0.2);
     .cardContent {
       text-align: center;
       padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.2);
+      background: $blur-background;
       backdrop-filter: blur(10px);
       color: white;
 
@@ -94,8 +109,10 @@ $shadow: rgba(0, 0, 0, 0.2);
     }
 
     &:hover {
+      transform: scale(1.05);
+
       .mentorImage {
-        transform: scale(1.05);
+        transform: scale(1.1);
       }
 
       .overlay {
@@ -112,15 +129,15 @@ $shadow: rgba(0, 0, 0, 0.2);
   }
 
   .mentorsGrid {
-    grid-template-columns: 1fr; // Single column for smaller screens
+    grid-template-columns: 1fr;
   }
 
   .mentorCard {
-    max-width: 90%; // Adjust card width for smaller screens
+    max-width: 90%;
   }
 
   .imageWrapper {
-    height: 250px !important; // Adjust image height for mobile
+    height: 250px !important;
   }
 
   .cardContent {
