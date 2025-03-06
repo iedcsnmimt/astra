@@ -36,7 +36,7 @@ const Register = () => {
           <h2 style={styles.heading}>Are you ready to attend the bootcamp?</h2>
 
           <a
-            href="https://docs.google.com/document/d/your-terms-doc-link" // Replace with actual Terms & Conditions Google Doc link
+            href="https://docs.google.com/document/d/1F_SrLhuG91Q_h-W8Xx4qsd-0lcCiQZNnaJvK6_LTMjk/edit?tab=t.0#heading=h.sj2z0lcbgmg9" // Replace with actual Terms & Conditions Google Doc link
             target="_blank"
             rel="noopener noreferrer"
             style={styles.termsLink}
