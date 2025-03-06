@@ -6,6 +6,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import SupportLink from '../components/SupportLink';
 import { ReactComponent as LinkIcon } from '../media/icons/link.svg';
+import Mentors from '../components/mentors';
 
 const parseTime = (timeStr) => {
   if (!timeStr) return new Date(0); // Handle missing time
@@ -105,6 +106,7 @@ const Events = ({ user }) => {
         </section>
       </main>
       <div className='container'>
+        <Mentors/>
         <SupportLink />
       </div>
     </motion.div>
